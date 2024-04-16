@@ -60,19 +60,19 @@ const ProductPage = () => {
               <h2 className="text-secondary font-medium uppercase">
                 {shirt.title}
               </h2>
-              <p className="text-gray-500 max-w-[150px]">{shirt.desc}</p>
-              <p className="text-gray-500 max-w-[200px] truncate textOverflow">
+              <p className="text-gray-500">{shirt.desc}</p>
+              <p className="text-gray-500 w-full">
                 Tamanhos:{" "}
-                {shirt.sizes.map((s, index) => (
+                {shirt.sizes?.map((s, index) => (
                   <b key={index} className="w-[20px] h-[20px]">
                     {s}
                     {shirt.sizes.length - 1 === index ? "" : ", "}
                   </b>
                 ))}
               </p>
-              <p className="text-gray-500 max-w-[200px] truncate textOverflow">
+              <p className="text-gray-500 w-full">
                 Cores:{" "}
-                {shirt.colors.map((s, index) => (
+                {shirt.colors?.map((s, index) => (
                   <b key={index} className="w-[20px] h-[20px]">
                     {s}
                     {shirt.colors.length - 1 === index ? "" : ", "}
